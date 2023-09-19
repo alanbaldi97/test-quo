@@ -8,7 +8,7 @@ const Page = () => {
 
     const [selectFilter, setSelectFilter] = useState('')
 
-    const [fromDate, setFromDate] = useState(moment().format('YYYY-MM-DD'))
+    const [fromDate, setFromDate] = useState(moment().subtract(1, 'months').format('YYYY-MM-DD'))
 
     const changeFilter = (e: any) => {
         setSelectFilter(e.target.value)
