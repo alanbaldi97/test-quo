@@ -1,3 +1,4 @@
+import Menu from '@/components/Menu'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -16,7 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className + " bg-gray-100"}>
+        <div className='grid grid-cols-12'>
+          <Menu />
+          <div className='col-span-10 h-screen p-2 overflow-auto'>
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   )
 }
